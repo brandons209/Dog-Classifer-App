@@ -20,20 +20,20 @@ class classifier_network:
 
     def __init__(self):
         #dog detector model:
-        self.ResNet50_model = load_model('resnet50_dog_identifier_model.h5')
-        self.face_cascade = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt.xml')
+        self.ResNet50_model = load_model('assets/resnet50_dog_identifier_model.h5')
+        self.face_cascade = cv2.CascadeClassifier('assets/haarcascade_frontalface_alt.xml')
 
         #inception model without fully connected layers
-        self.inception_transferred = load_model('inceptionv3_dog_classifier_convolution_layers.h5')
+        self.inception_transferred = load_model('assets/inceptionv3_dog_classifier_convolution_layers.h5')
 
         #dog names ordered for net:
-        with open('dog_names.txt', 'r') as file:
+        with open('assets/dog_names.txt', 'r') as file:
             self.dog_names = []
             for line in file:
                 self.dog_names.append(line)
 
         #my model pre-trained:
-        self.inception_model = load_model('inception_model_classifier.h5')
+        self.inception_model = load_model('assets/inception_model_classifier.h5')
 
     def path_to_tensor(self, img_path):
         # loads RGB image as PIL.Image.Image type

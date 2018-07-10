@@ -11,6 +11,4 @@ I built a simply GUI to supply images for classification. It should take any ima
 
 If you want to try it out, install the requirements and run dog_classifier.py!
 
-Sorry in advance for it having memey text, just added it for the meme.
-
 Enjoy!

@@ -1,4 +1,4 @@
-# Dog-Classifer-App
+# Dog-Classifier-App
 
 [License](LICENSE)
 
